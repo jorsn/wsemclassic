@@ -59,4 +59,4 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING 
 ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
 DAMAGE.
 
-For more details please read the 'LICENSE' file.
+For more details please read the '[LICENSE](https://github.com/jorsn/wsemclassic/blob/master/LICENSE)' file.
