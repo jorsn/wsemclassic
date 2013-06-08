@@ -28,7 +28,10 @@ for your w-seminar paper,
 \place{<The place where you live/write your paper>}
 ```
 
-To see all class options take a look at the first few lines of `wsemclassic.cls`.
+For maximum conformity with the
+[Bavarian Kultusministerium's recommendations](http://www.jack-steinberger-gymnasium.de/joomla/images/Dokumente/Oberstufe/Material/Merkblatt_Seminararbeit.pdf)
+use `strict` class option.
+To see all options take a look at the first few lines of `wsemclassic.cls`.
 
 
 TODO
