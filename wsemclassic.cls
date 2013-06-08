@@ -143,7 +143,7 @@
 
 
 \ifws@natbib
-  \RequirePackage{natbib}
+  \RequirePackage[\ws@natbibargs]{natbib}
 \fi
 
 
@@ -243,27 +243,31 @@
 
 
 \ifws@hyperref
-  \newcommand{\hypermeta}[2]{
+  \newcommand{\onlyhypermeta}[2]{
     \hypersetup{
       pdf#1=#2
     }
   }
 \else
-  \newcommand{\hypermeta}[2]{}
+  \newcommand{\onlyhypermeta}[2]{}
 \fi
 
 \newcommand{\setmeta}[2]{
   {
     \def\@metaname{@#1}
     \expandafter\gdef\csname\@metaname\endcsname{#2}
-    \hypermeta{#1}{#2}
   }
 }
 
-\renewcommand{\author}[1]{\setmeta{author}{#1}}
-\renewcommand{\title}[1]{\setmeta{title}{#1}}
+\newcommand{\sethypermeta}[2]{
+  \setmeta{#1}{#2}
+  \onlyhypermeta{#1}{#2}
+}
+
+\renewcommand{\author}[1]{\sethypermeta{author}{#1}}
+\renewcommand{\title}[1]{\sethypermeta{title}{#1}}
 \renewcommand{\date}[1]{\setmeta{date}{#1}}
-\newcommand{\subject}[1]{\setmeta{subject}{#1}}
+\newcommand{\subject}[1]{\sethypermeta{subject}{#1}}
 \newcommand{\school}[1]{\setmeta{school}{#1}}
 \newcommand{\major}[1]{\setmeta{major}{#1}}
 \newcommand{\teacher}[1]{\setmeta{teacher}{#1}}
