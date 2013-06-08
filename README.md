@@ -34,6 +34,12 @@ use `strict` class option.
 To see all options take a look at the first few lines of `wsemclassic.cls`.
 
 
+### Example
+
+To see an example please have a look at wsemclassic-test.tex.
+You can build the PDF by running `make` or building it manually using `pdflatex`/`lualatex` and `bibtex`.
+
+
 TODO
 -----------
 
