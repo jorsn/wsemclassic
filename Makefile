@@ -16,7 +16,7 @@ test: clean-pdf $(NAME).pdf
 tmp-dir:
 	test -d $(tmp_dir) || mkdir $(tmp_dir)
 
-$(NAME).pdf: tmp-dir $(NAME).tex expose.bib
+$(NAME).pdf: tmp-dir $(NAME).tex test.bib
 	$(D_LATEX)
 	grep nobib $(NAME).tex || $(BIBTEX)
 	$(D_LATEX)
