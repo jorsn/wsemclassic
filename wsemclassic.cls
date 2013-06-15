@@ -220,7 +220,13 @@
   \newcommand{\spaced}[1]{\textls[250]{\ifPDFTeX\else\addfontfeatures{Renderer=Basic}\fi#1}}
 \else
   \RequirePackage{soulutf8}
-  \newcommand{\spaced}[1]{\so{#1}}
+  \newcommand{\spaced}[1]{
+    {
+      \def\text{#1~}
+      \so\text
+    }
+  }
+  \newcommand{\mainstyle}[1]{\Large\bfseries\textsc{\spaced{#1\,}}}
 \fi
 
 \newcommand{\mainstyle}[1]{\Large\bfseries\textsc{\spaced{#1}}}
@@ -308,7 +314,7 @@
     {\qpname\par}
     \vskip 7em
     \begin{center}
-	    {\mainstyle{\mainname}\par}
+      {\mainstyle{\mainname}\par}
       \vskip .5em
       {\submainstyle{\submainname}\par}
       \vskip .5em
