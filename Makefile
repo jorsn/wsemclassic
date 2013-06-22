@@ -23,7 +23,7 @@ doc: FILE_EXT	:= $(NAME_EXT)
 doc: clean-pdf $(NAME).pdf
 
 test: FILE_EXT	:= $(TEST_NAME_EXT)
-test: clean-pdf $(TEST_NAME).pdf
+test: clean-pdf $(NAME).cls $(TEST_NAME).pdf
 
 tmp-dir:
 	test -d $(tmp_dir) || mkdir $(tmp_dir)
