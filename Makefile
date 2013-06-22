@@ -12,7 +12,12 @@ BIBTEX	= bibtex $(tmp_dir)/$(FILE)
 RUN_LATEX = $(LATEX) $(FILE).$(FILE_EXT)
 
 
-all: doc test
+all: cls doc test
+
+cls: $(NAME).cls
+
+%.cls: %.dtx %.ins
+	tex $*.ins
 
 doc: FILE_EXT	:= $(NAME_EXT)
 doc: clean-pdf $(NAME).pdf
@@ -41,3 +46,4 @@ clean-pdf:
 
 clean: clean-pdf
 	rm -rf $(tmp_dir)
+	rm $(NAME).cls
