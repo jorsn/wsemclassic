@@ -534,7 +534,7 @@ prefix = ws@
 	  \edef\mark@section{##1}
 	  \lhead{\mark@section}
   }
-  \def\setsectionmark##1{
+  \def\setsubsectionmark##1{
 	  \iffirstsection
 	  \firstsectionfalse
 	  \edef\mark@section{##1}
@@ -544,7 +544,7 @@ prefix = ws@
 
   \renewcommand{\chaptermark}[1]{\setchaptermark{\chaptername~\thechapter.~~##1}}
   \renewcommand{\sectionmark}[1]{\setsectionmark{\thesection~~##1}}
-  \renewcommand{\sectionmark}[1]{\setsectionmark{\thesection~~##1}}
+  \renewcommand{\subsectionmark}[1]{\setsubsectionmark{\thesubsection~~##1}}
 }
 %    \end{macrocode}
 % \end{package}
