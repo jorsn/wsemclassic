@@ -40,12 +40,6 @@ To see an example please have a look at wsemclassic-test.tex.
 You can build the PDF by running `make` or building it manually using `pdflatex`/`lualatex` and `bibtex`.
 
 
-TODO
------------
-
-- [ ] add Documentation (perhaps turn cls into dtx)
-- [ ] then make a package for [ctan](http://ctan.org)
-
 
 Copyright
 -----------
