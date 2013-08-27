@@ -18,7 +18,7 @@ RUN_LATEX = $(LATEX) $(FILE).$(FILE_EXT)
 
 
 ifeq "$(VERSION)" "stable"
-  COMMIT	:= $(shell git tag | tail -n 1 | grep . >&2 || echo 'n') #; else echo "No stable version available!"; exit 1; fi)
+  COMMIT	:= $(shell git tag | tail -n 1 | grep . || echo 'n') #; else echo "No stable version available!"; exit 1; fi)
   ifeq "$(COMMIT)" "n "
     $(error "No stable version available!")
   endif
@@ -72,8 +72,8 @@ ctan: PKG_NAME		:= $(NAME)-$(VERSION)
 ctan: pkg_pdf_dir	:= $(tmp_dir)/$(PKG_NAME)
 ctan: TAR		:= $(work_dir)/$(pkg_dir)/$(PKG_NAME).tar
 ctan: all
-	mkdir $(pkg_pdf_dir)
-	mkdir $(pkg_dir)
+	test -d $(pkg_pdf_dir) || mkdir $(pkg_pdf_dir)
+	test -d $(pkg_dir) || mkdir $(pkg_dir)
 	cp $$(< $(PDF_LIST)) $(pkg_pdf_dir)
 	git archive --prefix=$(PKG_NAME)/ -o $(TAR) $(COMMIT)
 	-for file in $$(grep -v '^#' .ctanignore); do \
