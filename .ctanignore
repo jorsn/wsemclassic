@@ -1,0 +1,3 @@
+# list of files not to be included in a ctan package
+.ctanignore
+.gitignore
