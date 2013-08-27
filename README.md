@@ -7,7 +7,7 @@ A LaTeX document class for bavarian school w-seminar papers, based on report.
 Usage
 -----------
 
-to use [wsemclassic](https://github.com/jorsn/wsemclassic "GitHub: wsemclassic")
+to use [wsemclassic][ws@github]
 for your w-seminar paper,
 
 * download it (e.g. `git clone git://github.com/jorsn/wsemclassic.git`)
@@ -29,9 +29,12 @@ for your w-seminar paper,
 ```
 
 For maximum conformity with the
-[Bavarian Kultusministerium's recommendations](http://www.jack-steinberger-gymnasium.de/joomla/images/Dokumente/Oberstufe/Material/Merkblatt_Seminararbeit.pdf)
+[Bavarian Kultusministerium's recommendations][recomm]
 use `strict` class option.
 To see all options take a look at the first few lines of `wsemclassic.cls`.
+
+[ws@github]: https://github.com/jorsn/wsemclassic "GitHub: wsemclassic"
+[recomm]: http://www.jack-steinberger-gymnasium.de/joomla/images/Dokumente/Oberstufe/Material/Merkblatt_Seminararbeit.pdf
 
 
 ### Example
@@ -59,4 +62,6 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING 
 ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
 DAMAGE.
 
-For more details please read the '[LICENSE](https://github.com/jorsn/wsemclassic/blob/master/LICENSE)' file.
+For more details please read the '[LICENSE]' file.
+
+[LICENSE]: https://github.com/jorsn/wsemclassic/blob/master/LICENSE
