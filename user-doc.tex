@@ -12,6 +12,30 @@ comes with the standard \hologo{LaTeX} distribution.
 If you have any wishes or find bugs, please send an email to the author or
 \href{https://github.com/jorsn/wsemclassic/issues}{create an issue at GitHub}.
 
+
+\section{Usage}
+
+To use \wsemclassic\ for your W-Seminar paper, simply insert the following into your
+\hologo{LaTeX} preamble (before |\begin{document}|):
+
+\begin{verbatim}
+\documentclass[bibfile=<bibtex database name>]{wsemclassic}
+
+\author{<Your Name>}
+\title{<Paper Title>}
+\date{Abiturjahrgang~<year>}
+\subject{<Seminar Title/Subject>}
+\school{<School Name>}
+\major{major}{<Seminar Major Subject (Leitfach)>}
+\teacher{<Your Teacher>}
+\place{<The place where you live/write your paper>}
+\end{verbatim}
+
+
+\section{License}
+
+\wsemclassic\ is distributed under a BSD License
+
 \hypertarget{sec.options}{\section{Options}}
 
 Like many other \hologo{LaTeX} document classes, \wsemclassic\ accepts options in
