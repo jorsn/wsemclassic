@@ -23,7 +23,7 @@ for your w-seminar paper,
 \date{Abiturjahrgang~<year>}
 \subject{<Seminar Title/Subject>}
 \school{<School Name>}
-\major{major}{<Seminar Major Subject (Leitfach)>}
+\major{<Seminar Major Subject (Leitfach)>}
 \teacher{<Your Teacher>}
 \place{<The place where you live/write your paper>}
 ```
