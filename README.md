@@ -4,16 +4,24 @@ wsemclassic
 A LaTeX document class for bavarian school w-seminar papers, based on report.
 
 
-Usage
------------
+Installation
+------------
 
-to use [wsemclassic][ws@github]
-for your w-seminar paper,
 
-* download it (e.g. `git clone git://github.com/jorsn/wsemclassic.git`)
+* download it (e.g. `git clone git://github.com/jorsn/wsemclassic.git`/snapshot/[CTAN])
+* `cd wsemclassic`
+* `make`/`tex wsemclassic.ins`
 * put `wsemclassic.cls` into your working dir or a `texmf` dir
 * if you put it into a `texmf` dir, index it (texlive: run `texhash`)
-* insert the following into your LaTeX preamble (before `\begin{document}`):
+
+
+Usage
+------------
+
+to use [wsemclassic][ws@github]
+for your w-seminar paper, insert the following into
+your LaTeX preamble (before `\begin{document}`):
+
 
 ```latex
 \documentclass[bibfile=<bibtex database name>]{wsemclassic}
