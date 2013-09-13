@@ -14,6 +14,8 @@ Installation
 * put `wsemclassic.cls` into your working dir or a `texmf` dir
 * if you put it into a `texmf` dir, index it (texlive: run `texhash`)
 
+[CTAN]: http://ctan.org/pkg/wsemclassic
+
 
 Usage
 ------------
