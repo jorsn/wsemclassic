@@ -20,10 +20,9 @@ Installation
 Usage
 ------------
 
-to use [wsemclassic][ws@github]
-for your w-seminar paper, insert the following into
-your LaTeX preamble (before `\begin{document}`):
-
+To use [wsemclassic][ws@github]
+for your W-Seminar paper, simply begin your LaTeX
+document like that:
 
 ```latex
 \documentclass[bibfile=<bibtex database name>]{wsemclassic}
@@ -36,7 +35,12 @@ your LaTeX preamble (before `\begin{document}`):
 \major{<Seminar Major Subject (Leitfach)>}
 \teacher{<Your Teacher>}
 \place{<The place where you live/write your paper>}
+
+\begin{document}
+\maketitle
+\tableofcontents
 ```
+
 
 For maximum conformity with the
 [Bavarian Kultusministerium's recommendations][recomm]
