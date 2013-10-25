@@ -77,7 +77,7 @@
 %
 % \fi
 %
-% \CheckSum{480}
+% \CheckSum{459}
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
 %%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
@@ -511,31 +511,9 @@ prefix = ws@
 % and the page number in the footer is constructed.
 %    \begin{macrocode}
 \fancypagestyle{wsfancy}{
-  \fancyhead{}
-
-  \newif\iffirstsection
-  \firstsectiontrue
-
-  \def\setchaptermark##1{
-	  \firstsectiontrue
-	  \edef\mark@chapter{##1}
-	  \rhead{\mark@chapter}
-  }
-  \def\setsectionmark##1{
-	  \edef\mark@section{##1}
-	  \lhead{\mark@section}
-  }
-  \def\setsubsectionmark##1{
-	  \iffirstsection
-	  \firstsectionfalse
-	  \edef\mark@section{##1}
-	  \lhead{\mark@section\\\mark@section}
-	  \fi
-  }
-
-  \renewcommand{\chaptermark}[1]{\setchaptermark{\chaptername~\thechapter.~~##1}}
-  \renewcommand{\sectionmark}[1]{\setsectionmark{\thesection~~##1}}
-  \renewcommand{\subsectionmark}[1]{\setsubsectionmark{\thesubsection~~##1}}
+  \renewcommand{\chaptermark}[1]{\markboth{\chaptername~\thechapter\\##1}{}}
+  \renewcommand{\sectionmark}[1]{\gdef\mark@section{\thesection~~##1}\markright{\mark@section}{}}
+  \renewcommand{\subsectionmark}[1]{\markright{\mark@section\\\thesubsection~~##1}{}}
 }
 %    \end{macrocode}
 % \end{package}
