@@ -116,8 +116,12 @@ Specifies the bibliographystlye for \hologo{BibTeX}. \\
 
 \describeoption{bibfile}{text}{\char92{}jobname}
 Specifies the filename of the main \hologo{BibTeX} database (|*.bib|). \\
-\emph{|.bib| can be omitted.} \\
-All etries are included in the document.
+\emph{|.bib| can be omitted.}
+
+\describeoption{manbib}{boolean}{true}
+Specifies that the bibliography is not automatically included at the end
+of the document. You now have to include it yourself via the macro
+`\makebib`.
 
 
 
