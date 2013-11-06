@@ -209,6 +209,13 @@ prefix = ws@
 %    \end{macrocode}
 % \end{hyperopt}
 %
+% \begin{hyperopt}{manbib}
+%    \begin{macrocode}
+\DeclareBoolOption[false]{manbib}
+\DeclareComplementaryOption{nomanbib}{manbib}
+%    \end{macrocode}
+% \end{hyperopt}
+%
 %
 % \subsection{Options Related to Used Packages}
 %
@@ -858,7 +865,7 @@ prefix = ws@
 %
 % \begin{indmacro}{\AtEndDocument}
 %    \begin{macrocode}
-\AtEndDocument{\makebib\makeclosing}
+\AtEndDocument{\ifws@manbib\else\makebib\fi\makeclosing}
 %    \end{macrocode}
 % \end{indmacro}
 %
