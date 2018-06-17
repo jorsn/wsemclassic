@@ -3,6 +3,7 @@ wsemclassic
 
 A LaTeX document class for bavarian school w-seminar papers, based on report.
 
+**IMPORTANT NOTE:** I don't update this any more, for now. If you are using it or planning to do so, please contact me under johannes.rosenberger (at) jorsn.eu.
 
 Installation
 ------------
